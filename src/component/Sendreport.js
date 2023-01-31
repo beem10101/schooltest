@@ -28,26 +28,26 @@ const Sendreport = () => {
     const imageref = ref(storageref, path);
     const d = new Date().toLocaleString()
     console.log(d)
-    // uploadBytes(imageref, image).then((img) => {
-    //     getDownloadURL(img.ref).then((url) => {
-    //         addDoc(collection(db,classroom), {
-    //             name: name, 
-    //             lastname: lastname,
-    //             classroom: classroom,
-    //             image: url,
-    //             date : d,
-    //         })
-    //             .then(() => {
-    //                 alert('Message added successfully');
-    //                 setFormLoad(false)
-    //             })
-    //             .catch((error) => {
-    //                 alert(error.message);
-    //                 setFormLoad(false)
-    //             });
+    uploadBytes(imageref, image).then((img) => {
+        getDownloadURL(img.ref).then((url) => {
+            addDoc(collection(db,classroom), {
+                name: name, 
+                lastname: lastname,
+                classroom: classroom,
+                image: url,
+                date : d,
+            })
+                .then(() => {
+                    alert('Message added successfully');
+                    setFormLoad(false)
+                })
+                .catch((error) => {
+                    alert(error.message);
+                    setFormLoad(false)
+                });
               
-    //           })
-    // })
+              })
+    })
 
     setName("")
     setLastName("")
@@ -101,7 +101,7 @@ const getImage = () =>{
                     </select>
                   </div>
                   <div class="col-12 mt-5">
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
                   </div>
               </form>
               </div>

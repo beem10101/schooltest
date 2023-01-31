@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom'
 import { classroom } from '../../static/data';
 import { db } from '../../Firebase.js'
 import {collection,getDocs,addDoc,getFirestore} from 'firebase/firestore/lite'
+import pic1 from '../../5s.png'
+
 const Classroom = () => {
     const { slug } = useParams();
     const [show,setShow] = useState();
@@ -24,6 +26,7 @@ const Classroom = () => {
     useEffect(() => {
         console.log('hello')
         const post = classroom.data.find((item)=>item.classroom === slug)
+        console.log("post",post)
         setShow(post)
         console.log(post)
         fecthData()
@@ -48,9 +51,16 @@ const Classroom = () => {
                 {dataList.map((item)=>{
                     return (
                         <div>
-                            <p>{item.name}</p>
-                            <p>{item.lastname}</p>
-                            <p>{item.date}</p>
+                            <div className='banner-about'>
+                            <div class='card'>
+                            <img className="card-img-top-allreport" src={pic1}  alt="Card image cap"></img>
+                                <div class='card-body'>
+                                    <h5 class="card-title">{}</h5>
+                                    <p class="card-text">date</p>
+                                    <p class="card-text">name</p>
+                                </div>
+                            </div>
+                </div>
                         </div>
                     )
                 })}

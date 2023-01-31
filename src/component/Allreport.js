@@ -15,7 +15,7 @@ const Allreport = () => {
                                 <img className="card-img-top-allreport" src={pic1}  alt="Card image cap"></img>
                                 <div class='card-body'>
                                     <h5 class="card-title">{item.classroom}</h5>
-                                    <button type="button" class="btn btn-primary">Detail</button>
+                                    <a type="button" class="btn btn-primary" href={"classroom/"+item.classroom} role="button">Detail</a>
                                 </div>
                             </div>
                         </div>
