@@ -44,7 +44,7 @@ const Classroom = () => {
     
     return (
       <div>
-        {show && dataList &&(
+        {show && dataList.length > 0 &&(
             <div>
                 Classroom
                 {slug}
@@ -53,19 +53,27 @@ const Classroom = () => {
                         <div>
                             <div className='banner-about'>
                             <div class='card'>
-                            <img className="card-img-top-allreport" src={pic1}  alt="Card image cap"></img>
+                            <img className="card-img-top-allreport" src={item.image}  alt="Card image cap"></img>
                                 <div class='card-body'>
                                     <h5 class="card-title">{}</h5>
-                                    <p class="card-text">date</p>
-                                    <p class="card-text">name</p>
+                                    <p class="card-text">date:{item.date}</p>
+                                    <p class="card-text">by:{item.name}  {item.lastname}</p>
                                 </div>
                             </div>
                 </div>
+                            <br/>
                         </div>
                     )
                 })}
             </div>
         )}
+
+        {show && dataList.length === 0 && (
+            <div>
+                no report!
+            </div>
+        )}
+
         {!show && (
             <div>
                 No data!!!

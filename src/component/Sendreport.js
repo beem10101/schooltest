@@ -67,7 +67,7 @@ const getImage = () =>{
       <div className='container'>  
       <br/>
       <br/>
-      <button onClick={getImage}>getImage</button>
+      {/* <button onClick={getImage}>getImage</button> */}
       <br/>
         <div className='banner-about'>
           <div class="card">
@@ -75,7 +75,7 @@ const getImage = () =>{
             <div class="card-body">
               <h5 class="card-title"><i class="bi bi-check-circle"></i>Sendreport Here!!</h5>
               <form class="row mt-3 g-3 needs-validation" novalidate onSubmit={handleSubmit}>
-                  <input type='file' id="file-input" onChange={(e)=> setImage(e.target.files[0])}></input>
+                  <input type='file' id="file-input" multiple='multiple' onChange={(e)=> setImage(e.target.files[0])}></input>
                   <div class="col-md-4 mt-3">
                     <label for="fname">First name:</label>
                     <input type="text" placeholder='Enter your first name' value={name}
@@ -101,7 +101,7 @@ const getImage = () =>{
                     </select>
                   </div>
                   <div class="col-12 mt-5">
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
               </form>
               </div>
