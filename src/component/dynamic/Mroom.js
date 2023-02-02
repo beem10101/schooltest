@@ -41,7 +41,7 @@ const Mroom = () => {
                 <div class="card">
                 <img class="img-thumbnail" src={item.img} alt="Card image cap"/>
                   <div class="card-body">
-                    <h5 class="card-title">{item.classroom}</h5>
+                    <h5 class="card-title">{item.classroom.replace('-','/')}</h5>
                     <h5 class="card-title">{item.img}</h5>
 
                     <a

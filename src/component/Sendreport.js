@@ -6,14 +6,42 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { collection,addDoc } from 'firebase/firestore/lite';
 const Sendreport = () => {
   const option = [
+    {classroom : '1-1'},
+    {classroom : '1-2'},
+    {classroom : '1-3'},
+    {classroom : '1-4'},
+    {classroom : '1-5'},
+    {classroom : '1-6'},
+    {classroom : '2-1'},
+    {classroom : '2-2'},
+    {classroom : '2-3'},
+    {classroom : '2-4'},
+    {classroom : '2-5'},
+    {classroom : '2-6'},
+    {classroom : '3-1'},
+    {classroom : '3-2'},
+    {classroom : '3-3'},
+    {classroom : '3-4'},
+    {classroom : '3-5'},
+    {classroom : '3-6'},
+    {classroom : '4-1'},
+    {classroom : '4-2'},
+    {classroom : '4-3'},
+    {classroom : '4-4'},
+    {classroom : '4-5'},
+    {classroom : '4-6'},
+    {classroom : '5-1'},
+    {classroom : '5-2'},
+    {classroom : '5-3'},
+    {classroom : '5-4'},
+    {classroom : '5-5'},
+    {classroom : '5-6'},
     {classroom : '6-1'},
     {classroom : '6-2'},
     {classroom : '6-3'},
     {classroom : '6-4'},
     {classroom : '6-5'},
     {classroom : '6-6'},
-    {classroom : '6-7'},
-    {classroom : '6-8'}
   ]
   const [name, setName] = useState()
   const [lastname, setLastName] = useState()
@@ -33,7 +61,7 @@ const Sendreport = () => {
             addDoc(collection(db,classroom), {
                 name: name, 
                 lastname: lastname,
-                classroom: classroom,
+                classroom: classroom.replace('/','-'),
                 image: url,
                 date : d,
             })

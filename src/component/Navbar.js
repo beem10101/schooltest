@@ -16,12 +16,12 @@ const Navbar = () => {
             ห้องทั้งหมด
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="M/M6">ม.6</a></li>
-            <li><a class="dropdown-item" href="/M5">ม.5</a></li>
-            <li><a class="dropdown-item" href="/M4">ม.4</a></li>
-            <li><a class="dropdown-item" href="/M3">ม.3</a></li>
-            <li><a class="dropdown-item" href="/M2">ม.2</a></li>
-            <li><a class="dropdown-item" href="/M1">ม.1</a></li>
+            <li><a class="dropdown-item" href="/M/M6">ม.6</a></li>
+            <li><a class="dropdown-item" href="/M/M5">ม.5</a></li>
+            <li><a class="dropdown-item" href="/M/M4">ม.4</a></li>
+            <li><a class="dropdown-item" href="/M/M3">ม.3</a></li>
+            <li><a class="dropdown-item" href="/M/M2">ม.2</a></li>
+            <li><a class="dropdown-item" href="/M/M1">ม.1</a></li>
           </ul>
         </li>
       </ul>
